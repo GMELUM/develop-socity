@@ -33,7 +33,7 @@
   "scripts": {
     "start": "cross-env PORT=18300 HTTPS=false react-scripts start",
     "build": "cross-env NODE_ENV=production GENERATE_SOURCEMAP=false react-scripts build",
-    "deploy": "git subtree push --prefix build https://github.com/GMELUM/develop-socity gh-pages"
+    "deploy": "git subtree push --prefix ./build https://github.com/GMELUM/develop-socity gh-pages"
   },
   "eslintConfig": {
     "extends": [
