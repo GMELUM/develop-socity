@@ -1,0 +1,7 @@
+@import './style/platform.css';
+
+/* THEME */
+@import './style/theme/light.css';
+@import './style/theme/dark.css';
+/* THEME */
+

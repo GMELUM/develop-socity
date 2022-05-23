@@ -1,0 +1,16 @@
+.PanelHeader {
+    display: flex;
+    width: 100%;
+    height: var(--header-height);
+    border-bottom: 1px solid var(--base-95);
+}
+
+.PanelHeader_before {
+    height: 100%;
+    min-width: 12px;
+}
+
+.PanelHeader_content {
+    display: flex;
+    flex: 1 1;
+}

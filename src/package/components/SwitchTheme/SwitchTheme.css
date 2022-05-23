@@ -1,0 +1,82 @@
+.SwitchTheme {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.SwitchTheme_inner {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    width: 40px;
+    height: 22px;
+    padding: 2px;
+    border-radius: 15px;
+    transform: translateX(0px);
+    transition: transform .24s;
+}
+
+.SwitchTheme_dark,
+.SwitchTheme_light {
+    display: flex;
+    color: var(--base-65);
+    font-size: .8rem;
+    padding: 0 10px;
+    align-items: center;
+    text-transform: uppercase;
+    transition: .24s;
+}
+
+.SwitchTheme_dark--active { color: var(--inverted-95)}
+
+.SwitchTheme_light--active { color: var(--inverted-95)}
+
+.SwitchTheme_toddler {
+    width: 22px;
+    height: 22px;
+    background: var(--base);
+    display: block;
+    border-radius: 11px;
+    transition: transform .24s;
+}
+
+.SwitchTheme--disable {
+    opacity: .5;
+}
+
+.SwitchTheme--dark, 
+.SwitchTheme--light {
+    background-color: var(--inverted);
+}
+
+.SwitchTheme--dark .SwitchTheme_toddler {
+    background-color: var(--base);
+    transform: translateX(0px);
+}
+
+.SwitchTheme--dark .SwitchTheme_toodler_inner {
+    background-color: var(--inverted);
+    transform: translateX(-14px) translateY(-6px);
+}
+
+.SwitchTheme--leght {
+    background-color: var(--inverted-80);
+}
+
+.SwitchTheme--light .SwitchTheme_toddler {
+    background-color: var(--base);
+    transform: translateX(18px);
+}
+
+.SwitchTheme_toodler_inner {
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--inverted-80);
+    transition: transform .8s;
+    left: 24px;
+    bottom: -6px;
+}

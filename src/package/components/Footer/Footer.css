@@ -1,0 +1,38 @@
+.Footer {
+    display: flex;
+    width: 100%;
+    min-height: 49px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #b5b5b5;
+}
+
+.Footer_before,
+.Footer_after {
+    display: flex;
+    width: 49px;
+    min-height: 49px;
+    align-items: center;
+    justify-content: center;
+}
+
+.Footer_center {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    align-items: center;
+    justify-content: center;
+}
+
+.Footer .Cell_children {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Panel_footer .Footer {
+    border-top: 1px solid var(--base-95);
+}

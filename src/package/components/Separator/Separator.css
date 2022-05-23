@@ -1,0 +1,10 @@
+.Separator {
+    z-index: 0;
+    height: 1px;
+    background-color: var(--base-95);
+}
+
+.Separator--small { margin: 12px 35%; }
+.Separator--medium { margin: 12px 25%; }
+.Separator--large { margin: 12px 12px; }
+.Separator--wide { margin: 12px 0; }

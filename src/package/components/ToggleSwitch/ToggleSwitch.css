@@ -1,0 +1,77 @@
+.ToggleSwitch {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 40px;
+    height: 22px;
+    border-radius: 13px;
+    transition: .24s;
+}
+
+.ToggleSwitch_toddler {
+    width: 22px;
+    height: 22px;
+    background: var(--base);
+    display: block;
+    border-radius: 11px;
+    transition: .24s;
+}
+
+.ToggleSwitch--active {
+    border: 2px solid var(--accent);
+    background: var(--accent);
+}
+.ToggleSwitch--active .ToggleSwitch_toddler {
+    animation: toggle_active .3s ease forwards;
+    /* transform: translateX(18px); */
+}
+
+.ToggleSwitch--unactive {
+    border: 2px solid var(--base-90);
+    background: var(--base-90);
+}
+.ToggleSwitch--unactive .ToggleSwitch_toddler {
+    animation: toggle_unactive .3s ease forwards;
+}
+
+.ToggleSwitch--disable {
+    opacity: .5;
+}
+
+@keyframes toggle_active {
+    0% { 
+        float: left;
+        width: 22px;
+    }
+    69% {
+        float: left;
+        width: 40px;
+    }
+    70% {
+        float: right;
+        width: 40px;
+    }
+    100% {
+        float: right;
+        width: 22px;
+    }
+}
+
+@keyframes toggle_unactive {
+    0% { 
+        float: right;
+        width: 22px;
+    }
+    69% {
+        float: right;
+        width: 40px;
+    }
+    70% {
+        float: left;
+        width: 40px;
+    }
+    100% {
+        float: left;
+        width: 22px;
+    }
+}

@@ -1,0 +1,60 @@
+.ProfileCard {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.ProfileCard_avatar {
+    display: flex;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid var(--accent);
+}
+
+.ProfileCard_avatar::after {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+}
+
+.ProfileCard_avatar span {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.ProfileCard_info {
+    display: flex;
+    position: relative;
+    flex: 1 1;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0 0 0 12px;
+    justify-content: center;
+}
+
+.ProfileCard_top,
+.ProfileCard_center,
+.ProfileCard_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.ProfileCard_top,
+.ProfileCard_center {
+    font-size: 20px;
+    color: var(--inverted-90);
+}
+
+.ProfileCard_bottom {
+    color: var(--base-55);
+    font-size: 14px;
+} 

@@ -1,0 +1,26 @@
+body[scheme=dark] {
+
+    --accent: #64769c;
+
+    --base: #191919;
+    --base-95: #232323;
+    --base-90: #2d2d2d;
+    --base-85: #373737;
+    --base-80: #414141;
+    --base-75: #4b4b4b;
+    --base-70: #555555;
+    --base-65: #5f5f5f;
+    --base-60: #696969;
+    --base-55: #737373;
+
+    --inverted: #ffffff;
+    --inverted-95: #f5f5f5;
+    --inverted-90: #ebebeb;
+    --inverted-85: #e1e1e1;
+    --inverted-80: #d7d7d7;
+    --inverted-75: #cdcdcd;
+    --inverted-70: #c3c3c3;
+    --inverted-65: #b9b9b9;
+    --inverted-60: #afafaf;
+    --inverted-55: #a5a5a5;
+}

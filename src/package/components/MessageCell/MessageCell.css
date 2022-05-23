@@ -1,0 +1,53 @@
+.MessageCell {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 74px;
+    padding: 4px 12px;
+    border-bottom: 1px solid var(--base-95);
+    box-sizing: border-box;
+}
+
+.MessageCell_inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.MessageCell_before {
+    width: 50px;
+    height: 50px;
+}
+
+.MessageCell_content {
+    display: flex;
+    overflow: hidden;
+    flex: 1 1;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.MessageCell_title {
+    margin: 2px 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.MessageCell_subtext {
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.85rem;
+    margin: 2px 0;
+}
+
+.MesageCell_after {
+    width: 10px;
+    height: 50px;
+}

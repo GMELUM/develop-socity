@@ -1,0 +1,49 @@
+.MessageBox {
+    display: flex;
+    margin: 0 2px;
+}
+
+.MessageBox--left {
+    flex-direction: row;
+}
+
+.MessageBox--right {
+    flex-direction: row-reverse;
+}
+
+.MessageBox_inner {
+    display: flex;
+    max-width: 300px;
+    height: auto;
+    min-height: 40px;
+    margin: 0 12px 12px 12px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: var(--base-95);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.MessageBox_text {
+    padding: 6px 12px 4px 12px;
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.MessageBox_info {
+    display: flex;
+    float: right;
+    padding: 8px 3px 3px 3px;
+    font-size: 0.8em;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    color: var(--inverted-55);
+}
+
+.MessageBox_attach {
+    max-width: 300px;
+    max-height: 300px;
+}

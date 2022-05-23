@@ -1,0 +1,64 @@
+.InlineButton {
+    display: flex;
+    position: relative;
+    min-height: 75px;
+    min-width: 75px;
+    margin: 2px;
+    border-radius: 12px;
+    padding: 6px;
+    flex-direction: column;
+    background: var(--base-95);
+    border: 1px solid var(--base-95);
+    transition: background .24s;
+}
+
+.InlineButton:first-child {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 1px;
+}
+
+.InlineButton--selected {
+    background-color: var(--base);
+    border: 1px solid var(--inverted-70);
+}
+
+.InlineButton--single .InlineButton_title {
+    justify-content: center
+}
+
+.InlineButton_title {
+    display: flex;
+    flex: 1 1;
+    float: left;
+    width: 100%;
+    padding: 4px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--inverted-70);
+}
+
+.InlineButton_description {
+    display: flex;
+    width: 100%;
+    flex: 1 1;
+    height: auto;
+    opacity: 1;
+    padding: 6px 4px;
+    box-sizing: border-box;
+    align-items: center;
+    color: var(--base-55);
+}
+
+.InlineButton--selected .InlineButton_description {
+    display: flex;
+    width: 100%;
+    flex: 1 1;
+    height: auto;
+    opacity: 1;
+    padding: 6px 4px;
+    box-sizing: border-box;
+    align-items: center;
+    color: var(--base-55);
+}

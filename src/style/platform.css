@@ -1,0 +1,65 @@
+:root {
+    --spinner-small: 24px;
+    --spinner-regular: 32px;
+    --spinner-medium: 44px;
+    --spinner-large: 56px;
+
+    --header-height: 56px;
+    --font-common: -apple-system, system-ui, Helvetica Neue, Roboto, sans-serif;
+}
+
+body[platform=ios] {
+    --header-height: 52px
+}
+
+body[platform=android] {
+    --header-height: 60px
+}
+
+body[platform=mvk] {
+    --header-height: 52px
+}
+
+html, body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-width: 320px;
+    height: 100vh;
+    min-height: 500px;
+    overflow: hidden;
+    background: var(--base);
+    color: var(--inverted-90);
+    font-family: var(--font-common);
+    pointer-events: painted;
+    touch-action: manipulation !important;
+}
+
+div, span {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@supports (padding-top: constant(safe-area-inset-top)) {
+    :root {
+        --safe-area-inset-top: constant(safe-area-inset-top);
+        --safe-area-inset-right: constant(safe-area-inset-right);
+        --safe-area-inset-bottom: constant(safe-area-inset-bottom);
+        --safe-area-inset-left: constant(safe-area-inset-left);
+    }
+}
+
+@supports (padding-top: env(safe-area-inset-top)) {
+    :root {
+        --safe-area-inset-top: env(safe-area-inset-top);
+        --safe-area-inset-right: env(safe-area-inset-right);
+        --safe-area-inset-bottom: env(safe-area-inset-bottom);
+        --safe-area-inset-left: env(safe-area-inset-left);
+    }
+}

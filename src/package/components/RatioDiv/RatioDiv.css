@@ -1,0 +1,17 @@
+.RatioDiv {
+    display: block;
+    position: relative;
+}
+
+.RatioDiv::after {
+    content: "";
+    display: block;
+    padding-top: var(--ratio-div);
+    background-color: var(--base-95);
+}
+
+.RatioDiv_children {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

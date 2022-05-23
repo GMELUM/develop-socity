@@ -1,0 +1,38 @@
+.ActionItem {
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0px;
+    justify-content: center;
+    align-content: space-around;
+    cursor: pointer;
+    transition: .24s;
+    align-items: center;
+}
+
+.ActionItem--unactive {
+    transform: scale(0.9);
+    color: var(--base-65);
+}
+
+.ActionItem--active {
+    transform: scale(0.999);
+    color: var(--accent);
+}
+
+.ActionItem--unactive .Avatar {
+    border: 2px solid var(--base-65);
+}
+
+.ActionItem--active .Avatar {
+    border: 2px solid var(--accent);
+}
+
+.ActionItem .Avatar {
+    display: flex;
+    position: relative;
+    width: auto;
+    height: 100%;
+    border-radius: 50%;
+}

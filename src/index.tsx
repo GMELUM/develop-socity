@@ -1,17 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import { RecoilRoot } from 'recoil';
+import { render } from 'react-dom';
+import { startup } from 'engine';
+import { StrictMode } from 'react';
+import bridge from '@vkontakte/vk-bridge';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import client from 'engine/elum.socket/client';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import 'style.css';
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+document.addEventListener("contextmenu", (e) => e.preventDefault());
+
+startup((params) => {
+
+    const auth = Object.fromEntries(params);
+
+    client.open({
+        url: "wss://dev.elum.team/socket",
+        params: auth
+    })
+
+    const app = document.getElementById('app');
+    render(
+        <RecoilRoot>
+            <StrictMode>
+                <App />
+            </StrictMode>
+        </RecoilRoot>,
+        app, () => bridge.send("VKWebAppInit")
+    );
+
+});

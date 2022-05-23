@@ -1,0 +1,16 @@
+.Text {
+    font-family: -apple-system, system-ui, Helvetica Neue, Roboto, sans-serif;
+}
+
+.Text_weight--light { font-weight: 100; }
+.Text_weight--normal { font-weight: 400; }
+.Text_weight--bold { font-weight: 600; }
+
+.Text_size--small { font-size: 10pt; }
+.Text_size--normal { font-size: 12pt; }
+.Text_size--medium { font-size: 14pt; }
+.Text_size--large { font-size: 26pt; }
+
+.Text_transform--normal { text-transform: none; }
+.Text_transform--lowercase { text-transform: lowercase; }
+.Text_transform--uppercase { text-transform: uppercase; }

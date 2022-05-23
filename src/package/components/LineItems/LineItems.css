@@ -1,0 +1,20 @@
+.LineItems {
+    display: flex;
+    width: 100%;
+    min-height: 28px;
+    overflow: hidden;
+    justify-content: center;
+    margin: 12px 0;
+}
+
+.LineItems > :first-child {
+    margin-right: 3px;
+}
+
+.LineItems > :last-child {
+    margin-left: 3px;
+}
+
+.LineItems > :not(:first-child):not(:last-child) {
+    margin: 0 3px;
+}

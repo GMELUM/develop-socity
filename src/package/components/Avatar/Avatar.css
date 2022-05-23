@@ -1,0 +1,38 @@
+.Avatar {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.Avatar img {
+    pointer-events: none;
+    display: block;
+    box-sizing: border-box;
+    padding: 2px;
+    margin: 0;
+    border-radius: 50%;
+    transition: .24s;
+}
+
+.Avatar--hidden img {
+    opacity: 0;
+}
+
+.Avatar--visible img {
+    opacity: 1;
+}
+
+.Avatar_loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transition: .24s;
+    border-radius: 50%;
+}

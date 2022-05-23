@@ -1,0 +1,115 @@
+.View {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.View_back {
+    position: absolute;
+    background: var(--base);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.View_active {
+    position: relative;
+    background: var(--base);
+    width: 100%;
+    height: 100%;
+}
+
+.View_down .View_active::before,
+.View_next .View_back::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--shadow-30);
+    z-index: 1;
+}
+
+.View_down .View_back {
+    z-index: 2;
+    -webkit-animation: backAnimation .3s ease forwards;
+    animation: backAnimation .3s ease forwards;
+}
+
+.View_next .View_active {
+    z-index: 2;
+    -webkit-animation: nextAnimation .3s ease forwards;
+    animation: nextAnimation .3s ease forwards;
+}
+
+.View_down .View_active::before {
+    -webkit-animation: downShadow .3s ease forwards;
+    animation: downShadow .3s ease forwards;
+}
+
+.View_down .View_active {
+    -webkit-animation: fromLeft .3s ease forwards;
+    animation: fromLeft .3s ease forwards;
+}
+
+.View_next .View_back::before {
+    -webkit-animation: upShadow .3s ease forwards;
+    animation: upShadow .3s ease forwards;
+}
+
+.View_next .View_back {
+    -webkit-animation: toLeft .3s ease forwards;
+    animation: toLeft .3s ease forwards;
+}
+
+.View_visible .View_active {
+    transform: translateX(0%);
+}
+
+.View_safe .View_active > .Panel_before,
+.View_safe .View_back > .Panel_before {
+    width: 100%;
+    height: 0px;
+    padding-top: var(--safe-area-inset-top);
+}
+
+.View_safe .View_active  > .Panel_after, 
+.View_safe .View_back > .Panel_after {
+    width: 100%;
+    height: 0px;
+    padding-bottom: var(--safe-area-inset-bottom);
+}
+
+@keyframes upShadow {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+@keyframes downShadow {
+    from { opacity: 1 }
+    to { opacity: 0 }
+}
+
+@keyframes nextAnimation {
+    from { transform: translateX(100%) }
+    to { transform: translateX(0%) }
+}
+
+@keyframes backAnimation {
+    from { transform: translateX(0%) }
+    to { transform: translateX(100%) }
+}
+
+@keyframes toLeft {
+    from { transform: translateX(0%) }
+    to { transform: translateX(-10%) }
+}
+
+@keyframes fromLeft {
+    from { transform: translateX(-10%) }
+    to { transform: translateX(0%) }
+}

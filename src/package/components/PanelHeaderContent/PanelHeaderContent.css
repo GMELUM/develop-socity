@@ -1,0 +1,26 @@
+.PanelHeaderContent {
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.PanelHeaderContent_title {
+    color: var(--inverted-90);
+}
+
+.PanelHeaderContent--only_title .PanelHeaderContent_title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.PanelHeaderContent--default .PanelHeaderContent_title {
+    font-size: 17px;
+}
+
+.PanelHeaderContent_description {
+    color: var(--base-55);
+    font-size: 14px;
+}

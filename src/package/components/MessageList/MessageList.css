@@ -1,0 +1,9 @@
+.MessageList {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    transition: .15s;
+}

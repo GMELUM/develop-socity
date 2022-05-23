@@ -1,0 +1,22 @@
+.ItemInfo {
+    display: flex;
+    min-height: 45px;
+    flex-shrink: 0;
+    flex-grow: 1;
+    justify-content: center;
+    align-content: space-around;
+    cursor: pointer;
+    transition: .24s;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ItemInfo_string {
+    color: var(--inverted-90);
+    font-size: 20px;
+}
+
+.ItemInfo_substring {
+    color: var(--base-55);
+    font-size: 12px;
+}

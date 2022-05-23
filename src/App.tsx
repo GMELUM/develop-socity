@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useRoute } from 'engine';
+import { useEvents } from 'engine/elum.socket/client';
+import { ACTIVE_VIEW } from 'engine/state';
+import { Root } from 'package';
+import { Loading, Main } from 'parent';
+import { FC, useEffect } from 'react';
+import { useRecoilValue } from 'recoil';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+interface IApp { };
+
+const App: FC<IApp> = () => {
+    const { backPage } = useRoute();
+    const activeView = useRecoilValue(ACTIVE_VIEW);
+
+    useEffect(() => {
+        window.addEventListener('popstate', () => backPage());
+        window.history.pushState(undefined, "");
+    }, []);
+
+    useEvents((event, value) => {
+        switch (event) {
+            case "OPEN": console.log(event); break;
+            case "CONNECT": console.log(event); break;
+            case "CLOSE": console.log(event); break;
+            case "ERROR": console.log(event); break;
+            case "ABORT": console.log(event); break;
+        }
+    })
+
+    return (
+        <Root activeView={activeView}>
+            <Loading nav='loading' />
+            <Main nav='main' />
+        </Root>
+    )
 }
 
 export default App;

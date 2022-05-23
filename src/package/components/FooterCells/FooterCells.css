@@ -1,0 +1,22 @@
+.FooterCells {
+    display: flex;
+    width: 100%;
+    height: calc(48px + var(--safe-area-inset-bottom));
+    overflow: hidden;
+    justify-content: center;
+    border-top: 1px solid var(--base-95);
+}
+
+.FooterCells .SimpleCell {
+    height: 100%;
+    padding-bottom: var(--safe-area-inset-bottom);
+}
+
+.FooterCells .Cell_children {
+    justify-content: center;
+    align-items: center;
+}
+
+.FooterCells .SimpleCell:not(:last-child) {
+    border-right: 1px solid var(--base-95);
+}

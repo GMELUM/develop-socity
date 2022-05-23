@@ -1,0 +1,11 @@
+.PanelHeaderBack {
+    width: var(--header-height);
+    height: var(--header-height);
+    color: var(--accent);
+    box-sizing: border-box;
+    padding: 6px;
+}
+
+.PanelHeaderBack .Icon {
+    margin-left: -4px;
+}
