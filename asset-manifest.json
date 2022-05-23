@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/develop-socity/static/css/main.9b0c6b87.css",
-    "main.js": "/develop-socity/static/js/main.d0cad0f0.js",
+    "main.js": "/develop-socity/static/js/main.a9b46d82.js",
     "index.html": "/develop-socity/index.html"
   },
   "entrypoints": [
     "static/css/main.9b0c6b87.css",
-    "static/js/main.d0cad0f0.js"
+    "static/js/main.a9b46d82.js"
   ]
 }
